@@ -24,7 +24,6 @@ weather_params = {
 response = requests.get(OWM_Endpoint, params=weather_params)
 response.raise_for_status()
 weather_data = response.json()
-# print(weather_data["list"])
 
 will_rain = False
 for hour_data in weather_data["list"]:
